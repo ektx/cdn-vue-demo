@@ -15,18 +15,17 @@
   </head>
   <body>
     <div id="app" v-cloak>
-      <el-input
-        v-model="message"
-        style="width: 240px"
-        placeholder="Please input"
-      ></el-input>
-      <h1>{{ message }}</h1>
+      <hello></hello>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@3.4.27/dist/vue.global.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/element-plus@2.7.5/dist/index.full.min.js"></script>
+    <script src="./components/hello.js"></script>
     <script>
       const App = {
+        components: {
+          Hello: helloComponent()
+        },
         data() {
           return {
             message: ''
