@@ -3,6 +3,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>CDN Vue Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/element-plus@2.7.5/dist/index.min.css"
+    />
     <style>
       [v-cloak] {
         display: none;
@@ -11,20 +15,25 @@
   </head>
   <body>
     <div id="app" v-cloak>
+      <el-input
+        v-model="message"
+        style="width: 240px"
+        placeholder="Please input"
+      ></el-input>
       <h1>{{ message }}</h1>
-      <input v-model="message" />
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/element-plus@2.7.5/dist/index.full.min.js"></script>
     <script>
       const App = {
         data() {
           return {
-            message: 'Hello Vue'
+            message: ''
           }
         }
       }
-      Vue.createApp(App).mount('#app')
+      Vue.createApp(App).use(ElementPlus).mount('#app')
     </script>
   </body>
 </html>
