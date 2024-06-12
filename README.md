@@ -1,3 +1,3 @@
 # CDN vue demo
 
-This is a demo that uses Vue, Element Plus among other component libraries.
+Create an example project using CDN to include Vue, Element-plus, and more
