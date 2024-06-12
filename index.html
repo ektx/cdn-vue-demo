@@ -23,7 +23,7 @@
       <h1>{{ message }}</h1>
     </div>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.4.27/dist/vue.global.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/element-plus@2.7.5/dist/index.full.min.js"></script>
     <script>
       const App = {
@@ -33,6 +33,7 @@
           }
         }
       }
+      // 注意注册ElementPlus
       Vue.createApp(App).use(ElementPlus).mount('#app')
     </script>
   </body>
