@@ -15,12 +15,15 @@
   </head>
   <body>
     <div id="app" v-cloak>
-      <hello></hello>
+      <hello-plugin :msg="message">
+        <hello></hello>
+      </hello-plugin>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@3.4.27/dist/vue.global.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/element-plus@2.7.5/dist/index.full.min.js"></script>
     <script src="./components/hello.js"></script>
+    <script src="./plugins/helloPlugin.js"></script>
     <script>
       const App = {
         components: {
@@ -28,12 +31,12 @@
         },
         data() {
           return {
-            message: ''
+            message: 'Hello Vue'
           }
         }
       }
       // 注意注册ElementPlus
-      Vue.createApp(App).use(ElementPlus).mount('#app')
+      Vue.createApp(App).use(ElementPlus).use(helloPlugin()).mount('#app')
     </script>
   </body>
 </html>
